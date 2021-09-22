@@ -11,9 +11,10 @@ sudo apt-get upgrade -y
 echo ' 1. ********* INSTALACION VBoxGuestAdditions ************** '
 
 mkdir temp
-sudo cp share/VBoxGuestAdditions_6.0.12.iso /home/vagrant/temp
+wget https://download.virtualbox.org/virtualbox/6.1.12/VBoxGuestAdditions_6.1.12.iso
+sudo cp VBoxGuestAdditions_6.1.12.iso /home/vagrant/temp
 sudo mkdir -p temp/imagen
-sudo mount -o loop temp/VBoxGuestAdditions_6.0.12.iso temp/imagen
+sudo mount -o loop temp/VBoxGuestAdditions_6.1.12.iso temp/imagen
 sudo sh ./temp/imagen/VBoxLinuxAdditions.run
 
 
